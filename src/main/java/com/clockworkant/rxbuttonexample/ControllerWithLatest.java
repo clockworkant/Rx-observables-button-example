@@ -1,3 +1,5 @@
+package com.clockworkant.rxbuttonexample;
+
 import rx.Observable;
 
 public class ControllerWithLatest implements Controller{
@@ -10,7 +12,10 @@ public class ControllerWithLatest implements Controller{
 
     public void initWith(View view){
         Observable<String> fullNameObservable = Observable
-                .combineLatest(view.getFirstNameObservable(), view.getLastNameObservable(), (firstName, lastName) -> firstName + " " + lastName);
+                .combineLatest(
+                        view.getFirstNameObservable(),
+                        view.getLastNameObservable(),
+                        (firstName, lastName) -> firstName + " " + lastName);
 
         view.getButtonClickedObservable()
                 .withLatestFrom(fullNameObservable, (clickEvent, fullName) -> fullName)

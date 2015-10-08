@@ -1,3 +1,5 @@
+package com.clockworkant.rxbuttonexample;
+
 import rx.Observable;
 import rx.subjects.PublishSubject;
 

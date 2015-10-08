@@ -1,3 +1,5 @@
+package com.clockworkant.rxbuttonexample;
+
 /**
  * Created by alec on 07/10/2015.
  */
